@@ -1,12 +1,15 @@
 'use stict';
 
-const categories = document.querySelector('#categories');
+const categoriesAr = document.querySelector('#categories').children;
 
-const category = document.querySelector('.item > h2');
-let numOfCat = 0;
+const catPureAr = [...categoriesAr];
+
+console.log(`Number of categories: ${catPureAr.length}`);
+
 const message = () => {
-  console.log(categories.map(cat => category));
+  catPureAr.forEach(category => {
+    console.log(`Category: ${category.querySelector('h2').textContent}`);
+    console.log(`Elements: ${category.querySelector('ul').children.length}`);
+  });
 };
-console.log(category.textContent);
-console.log(categories);
 message();
