@@ -12,4 +12,5 @@ const message = () => {
     console.log(`Elements: ${category.querySelector('ul').children.length}`);
   });
 };
+
 message();

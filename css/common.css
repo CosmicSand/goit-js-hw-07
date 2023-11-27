@@ -90,3 +90,10 @@ ul {
 .cat-list-item:first-child {
   margin-top: 16px;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 24px;
+}
