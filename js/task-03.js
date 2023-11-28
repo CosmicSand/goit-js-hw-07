@@ -6,9 +6,9 @@ const spn = document.querySelector('#name-output');
 inp.addEventListener('input', changeName);
 
 function changeName(event) {
-  const username = event.currentTarget.value.trim().split('');
+  const username = event.currentTarget.value.trim();
 
   if (username.length !== 0) {
-    spn.textContent = username.join('');
+    spn.textContent = username;
   }
 }
