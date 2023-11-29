@@ -22,15 +22,24 @@ function createBoxes() {
   if (amount >= 1 && amount <= 100) {
     const divArray = [];
     for (let i = 0; i < amount; i++) {
-      divArray.push(
-        `<div style=width:${30 + 10 * i}px;height:${
-          30 + 10 * i
-        }px;background-color:${getRandomHexColor()}></div>`
-      );
+      divArray.push(`<div></div>`);
     }
     const boxes = divArray.join('');
     boxContainer.insertAdjacentHTML('afterbegin', boxes);
   }
+
+  const stylesAdding = () => {
+    const v = boxContainer.children;
+    const x = [...v];
+    x.forEach((el, i, ar) => {
+      ar[i].style.backgroundColor = getRandomHexColor();
+      ar[i].style.borderRadius = `4px`;
+      ar[i].style.boxShadow = `#2e2f42 0px 0px 3px 0px`;
+      ar[i].style.width = `${30 + 10 * i}px`;
+      ar[i].style.height = `${30 + 10 * i}px`;
+    });
+  };
+  stylesAdding();
 }
 
 destroyBtn.addEventListener('click', destroyBoxes);
