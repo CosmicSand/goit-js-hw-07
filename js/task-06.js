@@ -18,7 +18,6 @@ createBtn.addEventListener('click', createBoxes);
 
 function createBoxes() {
   const amount = Number.parseInt(inputValue.value);
-
   if (amount >= 1 && amount <= 100) {
     const divArray = [];
     for (let i = 0; i < amount; i++) {
@@ -43,7 +42,6 @@ function createBoxes() {
 }
 
 destroyBtn.addEventListener('click', destroyBoxes);
-
 function destroyBoxes() {
   boxContainer.textContent = null;
   inputValue.value = null;
