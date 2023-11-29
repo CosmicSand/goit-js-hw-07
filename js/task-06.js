@@ -28,10 +28,8 @@ function createBoxes() {
         }px;background-color:${getRandomHexColor()}></div>`
       );
     }
-
-    const divs = divArray.join('');
-
-    boxContainer.insertAdjacentHTML('afterbegin', divs);
+    const boxes = divArray.join('');
+    boxContainer.insertAdjacentHTML('afterbegin', boxes);
   }
 }
 
