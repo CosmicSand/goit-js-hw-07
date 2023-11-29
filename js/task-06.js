@@ -42,15 +42,3 @@ function destroyBoxes() {
   boxContainer.textContent = null;
   inputValue.value = null;
 }
-
-// function createCollection() {
-//   const divArray = [];
-//   for (let i = 0; i < quantity; i++) {
-//     divArray.push(
-//       `<div style=width:${30 + 10 * i}px;height:${
-//         30 + 10 * i
-//       }px;background-color:${getRandomHexColor()}></div>`
-//     );
-//   }
-//   return divArray.join('');
-// }
