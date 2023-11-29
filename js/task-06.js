@@ -14,16 +14,12 @@ const destroyBtn = document.querySelector('#controls button[data-destroy]');
 
 const boxContainer = document.querySelector('#boxes');
 
-createBtn.addEventListener('click', check);
+createBtn.addEventListener('click', createBoxes);
 
-function check(event) {
+function createBoxes() {
   const amount = Number.parseInt(inputValue.value);
 
   if (amount >= 1 && amount <= 100) {
-    boxContainer.insertAdjacentHTML('afterbegin', createBoxes(amount));
-  }
-
-  function createBoxes(amount) {
     const divArray = [];
     for (let i = 0; i < amount; i++) {
       divArray.push(
@@ -32,7 +28,9 @@ function check(event) {
         }px;background-color:${getRandomHexColor()}></div>`
       );
     }
-    return divArray.join('');
+    const divs = divArray.join('');
+
+    boxContainer.insertAdjacentHTML('afterbegin', divs);
   }
 }
 
