@@ -1,14 +1,14 @@
 'use strict';
 
-const inp = document.querySelector('#name-input');
-const spn = document.querySelector('#name-output');
+const input = document.querySelector('#name-input');
+const span = document.querySelector('#name-output');
 
-inp.addEventListener('input', changeName);
+input.addEventListener('input', changeName);
 
 function changeName(event) {
   const username = event.currentTarget.value.trim();
 
   if (username.length !== 0) {
-    spn.textContent = username;
+    span.textContent = username;
   }
 }
