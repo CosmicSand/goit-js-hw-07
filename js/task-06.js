@@ -39,7 +39,7 @@ function check(event) {
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
-  boxContainer.textContent = '';
+  boxContainer.textContent = null;
   inputValue.value = null;
 }
 
