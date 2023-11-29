@@ -10,20 +10,22 @@ const inputValue = document.querySelector('#controls input');
 
 const createBtn = document.querySelector('#controls button[data-create]');
 
+const destroyBtn = document.querySelector('#controls button[data-destroy]');
+
 const boxContainer = document.querySelector('#boxes');
 
 createBtn.addEventListener('click', check);
 
 function check(event) {
-  const quantity = Number.parseInt(inputValue.value);
+  const amount = Number.parseInt(inputValue.value);
 
-  if (quantity >= 1 && quantity <= 100) {
-    boxContainer.insertAdjacentHTML('afterbegin', createCollection());
+  if (amount >= 1 && amount <= 100) {
+    boxContainer.insertAdjacentHTML('afterbegin', createBoxes(amount));
   }
 
-  function createCollection() {
+  function createBoxes(amount) {
     const divArray = [];
-    for (let i = 0; i < quantity; i++) {
+    for (let i = 0; i < amount; i++) {
       divArray.push(
         `<div style=width:${30 + 10 * i}px;height:${
           30 + 10 * i
@@ -34,17 +36,21 @@ function check(event) {
   }
 }
 
-// console.log(inputValue.target.value);
+destroyBtn.addEventListener('click', destroyBoxes);
+
+function destroyBoxes() {
+  boxContainer.textContent = '';
+  inputValue.value = null;
+}
 
 // function createCollection() {
-//   const array = [];
-//   const boxes = array
-//     .map(box => `<div></div>`)
-//     .forEach((boxSt, i) => {
-//       const div = document.querySelector('boxSt');
-//       div.style.backgroundColor = getRandomHexColor();
-//       div.style.width = `${30 + 10 * i}px`;
-//       div.style.height = `${30 + 10 * i}px`;
-//     })
-//     .join('');
+//   const divArray = [];
+//   for (let i = 0; i < quantity; i++) {
+//     divArray.push(
+//       `<div style=width:${30 + 10 * i}px;height:${
+//         30 + 10 * i
+//       }px;background-color:${getRandomHexColor()}></div>`
+//     );
+//   }
+//   return divArray.join('');
 // }
