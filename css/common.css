@@ -26,6 +26,7 @@ p {
 
 ul,
 ol {
+  list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -43,18 +44,8 @@ input {
   border: none;
 }
 
-input {
-  padding: 8px;
-  font: inherit;
-}
-
 button {
   cursor: pointer;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 #categories {
