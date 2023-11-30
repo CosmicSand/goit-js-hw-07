@@ -208,3 +208,27 @@ p + .login-form {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+#boxes > div {
+  animation: 0.05s ease-in-out 0.5s infinite alternate rotate;
+  animation-play-state: paused;
+}
+
+#boxes > div:hover {
+  background-image: linear-gradient(to bottom, #0b3ef8, #ffff6c);
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+.hero-star-container:hover .hero-star,
+.hero-star-container:focus .hero-star {
+  animation-play-state: running;
+}
