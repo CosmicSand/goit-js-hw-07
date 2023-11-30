@@ -27,7 +27,7 @@ function createBoxes() {
     boxContainer.insertAdjacentHTML('afterbegin', boxes);
   }
 
-  const stylesAdding = () => {
+  function stylesAdding() {
     const childrenBoxes = boxContainer.children;
     const pureChildrenBoxes = [...childrenBoxes];
     pureChildrenBoxes.forEach((el, i, ar) => {
@@ -42,11 +42,12 @@ function createBoxes() {
 	rgba(255, 255, 255, 0.3)
 	)`;
     });
-  };
+  }
   stylesAdding();
 }
 
 destroyBtn.addEventListener('click', destroyBoxes);
+
 function destroyBoxes() {
   boxContainer.textContent = null;
   inputValue.value = null;
