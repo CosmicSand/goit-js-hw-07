@@ -36,6 +36,11 @@ function createBoxes() {
       ar[i].style.boxShadow = `#2e2f42 0px 0px 3px 0px`;
       ar[i].style.width = `${30 + 10 * i}px`;
       ar[i].style.height = `${30 + 10 * i}px`;
+      ar[i].style.backgroundImage = `linear-gradient(
+	to bottom, 
+	rgba(0, 0, 0, 0.1), 
+	rgba(255, 255, 255, 0.3)
+	)`;
     });
   };
   stylesAdding();
