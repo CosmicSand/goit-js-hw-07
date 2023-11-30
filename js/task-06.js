@@ -28,9 +28,9 @@ function createBoxes() {
   }
 
   const stylesAdding = () => {
-    const v = boxContainer.children;
-    const x = [...v];
-    x.forEach((el, i, ar) => {
+    const childrenBoxes = boxContainer.children;
+    const pureChildrenBoxes = [...childrenBoxes];
+    pureChildrenBoxes.forEach((el, i, ar) => {
       ar[i].style.backgroundColor = getRandomHexColor();
       ar[i].style.borderRadius = `4px`;
       ar[i].style.boxShadow = `#2e2f42 0px 0px 3px 0px`;
