@@ -215,7 +215,6 @@ p + .login-form {
 }
 
 #boxes > div:hover {
-  background-image: linear-gradient(to bottom, #0b3ef8, #ffff6c);
   animation-play-state: running;
 }
 
