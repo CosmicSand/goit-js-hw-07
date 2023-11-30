@@ -13,7 +13,7 @@ function register(event) {
   const second = form.elements.password.getAttribute('type');
   const result = {};
 
-  if (login.length === 0 || password.length === 0) {
+  if (!login.length || !password.length) {
     return alert('All form fields must be filled in');
   }
 
