@@ -1,13 +1,11 @@
 'use stict';
 
-const categoriesAr = document.querySelector('#categories').children;
+const categoriesAr = document.querySelectorAll('#categories .item');
 
-const catPureAr = [...categoriesAr];
-
-console.log(`Number of categories: ${catPureAr.length}`);
+console.log(`Number of categories: ${categoriesAr.length}`);
 
 const message = () => {
-  catPureAr.forEach(category => {
+  categoriesAr.forEach(category => {
     console.log(`Category: ${category.firstElementChild.textContent}`);
     console.log(`Elements: ${category.lastElementChild.children.length}`);
   });
