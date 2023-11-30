@@ -14,12 +14,12 @@ function register(event) {
   const result = {};
 
   if (login.length === 0 || password.length === 0) {
-    alert('All form fields must be filled in');
-  } else {
-    result[first] = login;
-    result[second] = password;
-    console.table(result);
+    return alert('All form fields must be filled in');
   }
+
+  result[first] = login;
+  result[second] = password;
+  console.table(result);
 
   event.target.reset();
 }
