@@ -30,13 +30,13 @@ function createBoxes() {
   function stylesAdding() {
     const childrenBoxes = boxContainer.children;
     const pureChildrenBoxes = [...childrenBoxes];
-    pureChildrenBoxes.forEach((el, i, ar) => {
-      ar[i].style.backgroundColor = getRandomHexColor();
-      ar[i].style.borderRadius = `4px`;
-      ar[i].style.boxShadow = `#2e2f42 0px 0px 3px 0px`;
-      ar[i].style.width = `${30 + 10 * i}px`;
-      ar[i].style.height = `${30 + 10 * i}px`;
-      ar[i].style.backgroundImage = `linear-gradient(
+    pureChildrenBoxes.forEach((el, i) => {
+      el.style.backgroundColor = getRandomHexColor();
+      el.style.borderRadius = `4px`;
+      el.style.boxShadow = `#2e2f42 0px 0px 3px 0px`;
+      el.style.width = `${30 + 10 * i}px`;
+      el.style.height = `${30 + 10 * i}px`;
+      el.style.backgroundImage = `linear-gradient(
 	to bottom, 
 	rgba(0, 0, 0, 0.1), 
 	rgba(255, 255, 255, 0.3)
