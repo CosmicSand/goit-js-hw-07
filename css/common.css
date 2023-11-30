@@ -226,8 +226,3 @@ p + .login-form {
     transform: rotate(1deg);
   }
 }
-
-.hero-star-container:hover .hero-star,
-.hero-star-container:focus .hero-star {
-  animation-play-state: running;
-}
