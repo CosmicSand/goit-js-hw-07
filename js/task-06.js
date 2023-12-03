@@ -17,7 +17,7 @@ const boxContainer = document.querySelector('#boxes');
 createBtn.addEventListener('click', createBoxes);
 
 function createBoxes() {
-  boxContainer.textContent = null;
+  boxContainer.innerHTML = null;
   const amount = Number.parseInt(inputValue.value);
   if (amount >= 1 && amount <= 100) {
     const divArray = [];
